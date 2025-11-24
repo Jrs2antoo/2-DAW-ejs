@@ -1,0 +1,18 @@
+.helloWorld {
+    width: 700px;
+    height: 700px;
+    background-color: #ffc800;  /* amarillo del ejemplo */
+
+    margin-top: 40px;
+    margin-left: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.helloWorld h1 {
+    font-size: 20px;
+    color: #333;
+}
+

@@ -1,0 +1,86 @@
+td{
+    width: 100px;
+    height: 100px;
+}
+.rojo{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.verde{
+    background-color: green;
+}
+.amarillo{
+    background-color: yellow;
+}
+
+.zona-juego {
+  display: grid;                         
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;                             
+  max-width: 1000px;
+  margin: 40px auto;                
+}
+
+
+.zona-juego > div {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+#boton {
+    background-color: lightblue;  
+    color: black;
+    border: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s;
+}
+
+.ej3 {
+  border: 2px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.ej4 {
+  text-align: center;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#circulo {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.numeros button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}

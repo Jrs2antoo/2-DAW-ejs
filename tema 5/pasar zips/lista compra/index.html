@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bud</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="contenedor-app">
+        <section class="tarjeta-lista">
+            <h1 class="titulo-app">Grocery Bud</h1>
+
+            <div class="formulario-productos">
+                <input
+                id="entrada-producto"
+                type="text"
+                placeholder="p. ej. huevos"
+                autocomplete="off"
+                />
+                <button id="boton-agregar" class="boton-enviar">Añadir</button>
+            </div>
+
+            <ul id="lista-productos" class="lista-productos"></ul>
+
+            <button id="boton-limpiar" class="boton-limpiar">Clear Items</button>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>

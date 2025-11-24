@@ -1,0 +1,104 @@
+/* Fondo del juego (el body entero) */
+/* ===== Fondo del juego ===== */
+body {
+  background-color: #000;   /* negro tipo arcade */
+  margin: 0;
+  overflow: hidden;         /* oculta scrolls */
+  height: 100vh;
+  position: relative;       /* permite posicionar bola y barra dentro */
+}
+
+/* ===== Contenedor opcional del juego ===== */
+#juego {
+  position: relative;
+  width: 100%;              /* ocupa todo el ancho disponible */
+  height: 100%;
+  border: 3px solid #333;
+  background-color: #111;
+  overflow: hidden;
+}
+
+/* ===== Bola ===== */
+#bola {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;   /* blanca */
+  border-radius: 50%;
+  position: absolute;
+  top: 0;                   /* empezará arriba, el JS la moverá */
+  left: 50%;                /* centrada horizontalmente */
+  transform: translateX(-50%);
+}
+
+/* ===== Barra ===== */
+#barra {
+  width: 120px;
+  height: 20px;
+  background-color: #0f0;   /* verde fosforito */
+  position: absolute;
+  bottom: 40px;             /* altura desde el fondo */
+  left: 47%;                  /* el JS la centrará al inicio */
+  border-radius: 10px;
+}
+
+#reiniciar {
+  display: inline-block;
+  background: linear-gradient(135deg, #e4ff3b, #c6e200);
+  color: #222;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 20px;    /* separación del juego */
+  margin-left: 20px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: 0.15s ease;
+}
+
+#reiniciar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  filter: brightness(1.05);
+}
+
+
+#reiniciar:hover {
+  background-color: #b4cb00;      /* Un verde un poco más oscuro al pasar */
+  transform: scale(1.05);         /* Efecto de “rebote” */
+}
+
+#reiniciar:active {
+  transform: scale(0.98);         /* Efecto al presionar */
+}
+
+#juego {
+  position: relative;
+  width: 1700px;          /* puedes cambiarlo */
+  height: 700px;
+  border: 3px solid #333;
+  margin: 0 auto;        /* centrado en la pantalla */
+  background-color: #111;
+  overflow: hidden;      /* oculta lo que se salga */
+}
+
+/* ===== Bloques ===== */
+#bloques {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+}
+
+.bloque {
+  height: 24px;
+  background: linear-gradient(#ff7675, #d63031);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}

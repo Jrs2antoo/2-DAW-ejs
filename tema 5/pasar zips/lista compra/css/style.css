@@ -1,0 +1,128 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PÁGINA */
+body {
+    background: #f2f6fa;
+    font-family: system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-app {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* TARJETA */
+.tarjeta-lista {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 25px 25px 20px;
+    text-align: center;
+}
+
+.titulo-app {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* ZONA INPUT + BOTÓN */
+.formulario-productos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#entrada-producto {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+    font-size: 1rem;
+    outline: none;
+}
+
+#entrada-producto:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+#boton-agregar {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #93c5fd;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+#boton-agregar:hover {
+    background: #60a5fa;
+}
+
+/* LISTA */
+.lista-productos {
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+/* CADA ELEMENTO DE LA LISTA */
+.lista-productos li {
+    background: #f8fafc;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* CONTENEDOR DE ICONOS (EL SEGUNDO SPAN) */
+.lista-productos li span:last-child {
+    display: flex;
+    gap: 10px;
+}
+
+/* ICONOS */
+.lista-productos li span:last-child i {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.lista-productos li span:last-child i:first-child {
+    color: #16a34a;  /* editar (verde) */
+}
+
+.lista-productos li span:last-child i:last-child {
+    color: #dc2626;  /* borrar (rojo) */
+}
+
+/* BOTÓN LIMPIAR */
+#boton-limpiar {
+    margin-top: 15px;
+    border: none;
+    background: transparent;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#boton-limpiar:hover {
+    text-decoration: underline;
+}

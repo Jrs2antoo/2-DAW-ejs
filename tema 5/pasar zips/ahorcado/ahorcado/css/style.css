@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #c4e538;          
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-ahorcado {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 20px 70px;
+}
+
+.titulo {
+  font-size: 56px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.instrucciones {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.contenedor-letras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.contenedor-letras button {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  background: #ffffff;
+  color: #7f8c8d;
+  font-size: 18px;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.contenedor-letras button:hover {
+  transform: translateY(-1px);
+}
+
+.categoria {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.categoria span {
+  font-weight: bold;
+}
+
+.palabra-oculta {
+  font-size: 32px;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+}
+
+.vidas {
+  font-size: 22px;
+}
+
+.vidas span {
+  font-weight: bold;
+}
