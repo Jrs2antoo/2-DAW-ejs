@@ -7,18 +7,44 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+    <h1>Cartelera</h1>
     <div class="buscador">
         <form id="form-busqueda">
             <input type="text" id="input-titulo" placeholder="Ingrese el título que desee buscar">
-
-            <input type="number"  id="input-ano" placeholder="Año" min="1900" max="2026">
-        
+            <input type="number" id="input-ano" placeholder="Año" min="1900" max="2026">
             <button type="submit">Buscar</button>
         </form>
     </div>
+
     <div id="peliculas"></div>
-    <button id="boton">Cargar más</button>
+
+    <div class="contenedor-boton">
+        <button id="boton">Cargar más películas</button>
+    </div>
+
+    <div id="detalle-overlay" class="overlay oculto">
+        <div class="detalle-card">
+            <button id="cerrar-detalle" class="btn-cerrar">✕</button>
+
+            <div class="detalle-img">
+                <img id="detalle-poster" src="" alt="Poster película">
+            </div>
+
+            <div class="detalle-info">
+                <h2 id="detalle-titulo"></h2>
+
+                <p><span class="detalle-label">Año:</span> <span id="detalle-year"></span></p>
+                <p><span class="detalle-label">Duración:</span> <span id="detalle-runtime"></span></p>
+                <p><span class="detalle-label">Género:</span> <span id="detalle-genre"></span></p>
+                <p><span class="detalle-label">Director:</span> <span id="detalle-director"></span></p>
+                <p><span class="detalle-label">IMDb:</span> <span id="detalle-rating"></span></p>
+
+                <p class="detalle-plot" id="detalle-plot"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 </body>
+
 </html>

@@ -9,6 +9,17 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 40px 0 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    color: #b5d5ea;
+}
+
+
 
 
 /* Contenedor general de las películas */
@@ -78,3 +89,198 @@ body {
 #boton:active {
     transform: scale(0.97);
 }
+
+.buscador {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#form-busqueda {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+#form-busqueda input[type="text"],
+#form-busqueda input[type="number"] {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 200px;
+    outline: none;
+}
+
+#form-busqueda input[type="text"]::placeholder,
+#form-busqueda input[type="number"]::placeholder {
+    color: #444;
+}
+
+#form-busqueda button {
+    background: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#form-busqueda button:hover {
+    background: #19004f;
+    transform: scale(1.05);
+}
+
+#form-busqueda button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive: que el buscador no se rompa */
+@media (max-width: 600px) {
+    #form-busqueda {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #form-busqueda input {
+        width: 100%;
+    }
+}
+
+/* ====== MODAL DETALLES PELÍCULA ====== */
+
+/* Fondo oscuro del modal por encima de todo */
+/* Fondo oscuro del modal */
+#detalle-overlay {
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("../img/shenron.jpg");  /* <-- aquí tu ruta */
+    background-size: cover;
+    background-position: center;
+    z-index: 999;
+}
+
+
+/* El que controla el display es la clase overlay */
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Y esta clase lo oculta cuando toque */
+.oculto {
+    display: none;
+}
+
+
+/* Tarjeta de detalles */
+.detalle-card {
+    background: rgba(10, 10, 10, 0.95);
+    color: #fff;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Botón de cerrar (X) */
+.btn-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.btn-cerrar:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+/* Imagen del detalle */
+.detalle-img {
+    flex: 0 0 260px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detalle-img img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* Texto del detalle */
+.detalle-info {
+    flex: 1;
+}
+
+.detalle-info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.detalle-label {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.detalle-info p {
+    margin: 4px 0;
+}
+
+.detalle-plot {
+    margin-top: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Responsive: en móvil en columna */
+@media (max-width: 700px) {
+    .detalle-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .detalle-img {
+        flex: 0 0 auto;
+    }
+
+    .detalle-info {
+        width: 100%;
+    }
+
+    .btn-cerrar {
+        top: 8px;
+        right: 10px;
+    }
+}
+
